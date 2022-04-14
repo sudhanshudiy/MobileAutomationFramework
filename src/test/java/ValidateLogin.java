@@ -19,5 +19,6 @@ public class ValidateLogin extends BaseTest {
     public void verifyHomePage() throws InterruptedException {
         LoginPage loginPage = new LoginPage(androidDriver);
         loginPage.login("","");
+
     }
 }

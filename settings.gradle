@@ -1,4 +1,0 @@
-rootProject.name = 'MobileAutomationFramework'
-
-println('initializing the project ........')
-

@@ -4,23 +4,20 @@ import Interface.IDrivers;
 import Interface.ILogger;
 import Util.ConfigUtil;
 import constants.Common;
-import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
+import io.appium.java_client.remote.AutomationName;
 import io.appium.java_client.remote.MobileCapabilityType;
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.io.File;
-import java.io.IOException;
 import java.net.URL;
 import java.util.Properties;
 
-public class IOSDriverManager implements ILogger, IDrivers {
+class IOSDriverManager implements ILogger, IDrivers {
 
-        private static AppiumDriver<MobileElement> iosDriver;
+        private static IOSDriver<MobileElement> iosDriver;
         private DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
         private ConfigUtil configUtil = new ConfigUtil();
         private File file;
@@ -30,16 +27,16 @@ public class IOSDriverManager implements ILogger, IDrivers {
         private IOSDriverManager(){}
 
         public DesiredCapabilities loadDesiredCap() {
-            properties = configUtil.getAllProperties(Common.CONFIG_PATH);
-            File loadfile = new File("src");
-            file = new File(loadfile, Common.DIY_APK);
-            desiredCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, properties.getProperty(Common.DEVICE_NAME));
+            properties = configUtil.getAllProperties("Users/itrs-2079/Library/Developer/Xcode/DerivedData/DIY-hcdphoadlxzgphgeuahybfvehioc/Build/Products/Release - Staging-iphonesimulator/DIY Staging.app");
+            File loadFile = new File("src");
+            file = new File(loadFile, Common.DIY_APK);
+            desiredCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, properties.getProperty(Common.IOS_DEVICE_NAME));
             desiredCapabilities.setCapability(MobileCapabilityType.APP, file.getAbsolutePath());
-            desiredCapabilities.setCapability(MobileCapabilityType.UDID, "emulator-5556");
-            desiredCapabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, Common.UIAUTOMATOR);
-            desiredCapabilities.setCapability("appPackage", "com.diy.develop");
-            desiredCapabilities.setCapability("appActivity", "com.diy.MainActivity");
-            desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "ANDROID");
+            desiredCapabilities.setCapability(MobileCapabilityType.UDID, Common.IOS_UUID );
+            desiredCapabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.IOS_XCUI_TEST);
+            desiredCapabilities.setCapability("appPackage", Common.APP_PACKAGE);
+            desiredCapabilities.setCapability("appActivity", Common.APP_ACTIVITY);
+            desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, Platform.IOS);
             return desiredCapabilities;
         }
 
@@ -49,10 +46,10 @@ public class IOSDriverManager implements ILogger, IDrivers {
         }
 
         @Override
-        public AppiumDriver<MobileElement> startDriver() {
+        public IOSDriver<MobileElement> startDriver() {
             if (null == iosDriver){
                 try {
-                    return iosDriver = new IOSDriver<MobileElement>(new URL(Common.LOCAL_HOST), loadDesiredCap());
+                    return iosDriver = new IOSDriver<>(new URL(Common.LOCAL_HOST), loadDesiredCap());
                 }catch (Exception e){
                     log.error("failed to load Android driver ....:::" + e.getMessage());
                 }
@@ -80,10 +77,5 @@ public class IOSDriverManager implements ILogger, IDrivers {
             }else{
                 throw new RuntimeException("Use getInstance() method to get the single instance of this class");
             }
-        }
-
-        public static void getScreenshot(String name) throws IOException {
-            File file  = ((TakesScreenshot)iosDriverManager).getScreenshotAs(OutputType.FILE);
-            FileUtils.copyFile(file, new File(System.getProperty("user.dir")+ "\\" + name+".jpg"));
         }
 }

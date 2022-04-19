@@ -12,6 +12,6 @@ public class Common {
         public static final String NEXUS_EMULATOR = "emulator-5554";
         public static final String APP_PACKAGE = "com.diy.develop";
         public static final String APP_ACTIVITY = "com.diy.MainActivity";
-        public static final String IOS_UUID = "7980EAD2-DBD6-4278-B37B-2AA5ECFEAD3D";
+        public static final String IOS_UUID = "44CE0981-550C-4C5A-A03E-08AE4F8414BC";
         public static final String IOS_DEVICE_NAME = "iPhone 12";
 }

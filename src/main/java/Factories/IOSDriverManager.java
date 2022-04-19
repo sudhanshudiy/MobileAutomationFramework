@@ -27,11 +27,7 @@ class IOSDriverManager implements ILogger, IDrivers {
         private IOSDriverManager(){}
 
         public DesiredCapabilities loadDesiredCap() {
-            properties = configUtil.getAllProperties("Users/itrs-2079/Library/Developer/Xcode/DerivedData/DIY-hcdphoadlxzgphgeuahybfvehioc/Build/Products/Release - Staging-iphonesimulator/DIY Staging.app");
-            File loadFile = new File("src");
-            file = new File(loadFile, Common.DIY_APK);
-            desiredCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, properties.getProperty(Common.IOS_DEVICE_NAME));
-            desiredCapabilities.setCapability(MobileCapabilityType.APP, file.getAbsolutePath());
+            desiredCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, Common.IOS_DEVICE_NAME);
             desiredCapabilities.setCapability(MobileCapabilityType.UDID, Common.IOS_UUID );
             desiredCapabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.IOS_XCUI_TEST);
             desiredCapabilities.setCapability("appPackage", Common.APP_PACKAGE);

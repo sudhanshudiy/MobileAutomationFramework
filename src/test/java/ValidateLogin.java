@@ -1,4 +1,4 @@
-import Factories.Base.BaseTest;
+import Base.BaseTest;
 import Factories.DriverFactory;
 import Pages.LoginPage;
 import constants.DriverTypes;
@@ -19,6 +19,5 @@ public class ValidateLogin extends BaseTest {
     public void verifyHomePage() throws InterruptedException {
         LoginPage loginPage = new LoginPage(androidDriver);
         loginPage.login("","");
-
     }
 }

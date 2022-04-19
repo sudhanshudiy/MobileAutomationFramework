@@ -1,5 +1,4 @@
 package Pages;
-
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.WebElement;
@@ -10,20 +9,20 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class HomePage {
+public class SecretsOfDrawing {
 
     private AppiumDriver driver;
 
-    public HomePage(AppiumDriver driver) {
+    public SecretsOfDrawing(AppiumDriver driver) {
         this.driver = driver;
         PageFactory.initElements(new AppiumFieldDecorator(driver, Duration.ofSeconds(8)), this);
     }
 
-    @FindBy(xpath = "//*[@text ='Art & Craft']")
-    private WebElement nfcElement;
+    @FindBy(xpath = "//*[@text ='View Course']")
+    private WebElement secretOfDrawing;
 
     public boolean isEnabled() {
-        return nfcElement.isEnabled();
+        return secretOfDrawing.isEnabled();
     }
 
     public void waitForVisibility(WebElement nfcElement) {
@@ -31,14 +30,14 @@ public class HomePage {
         wait.until(ExpectedConditions.visibilityOf(nfcElement));
     }
 
-    public void clickNfc() {
-        nfcElement.click();
+    public void click() {
+        secretOfDrawing.click();
     }
 
 
-    public void waitBeforeClickingNfc() throws InterruptedException {
-        waitForVisibility(nfcElement);
+    public void waitBeforeClicking() throws InterruptedException {
+        waitForVisibility(secretOfDrawing);
         isEnabled();
-        clickNfc();
+        click();
     }
 }

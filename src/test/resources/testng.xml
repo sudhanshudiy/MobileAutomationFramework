@@ -7,7 +7,7 @@
     </listeners>
     <test verbose="2" preserve-order="false" name="Test">
         <classes>
-            <class name="IOSTest"/>
+            <class name="ValidateLogin"/>
         </classes>
     </test>
 </suite>

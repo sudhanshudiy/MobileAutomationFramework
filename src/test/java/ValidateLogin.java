@@ -1,23 +1,23 @@
-import Base.BaseTest;
 import Factories.DriverFactory;
-import Pages.LoginPage;
+import Pages.KidsSignIn;
 import constants.DriverTypes;
 import io.appium.java_client.AppiumDriver;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class ValidateLogin extends BaseTest {
+public class ValidateLogin {
 
-    private AppiumDriver androidDriver;
+    private AppiumDriver driver;
 
     @BeforeClass
     public void startDriver() {
-        androidDriver = DriverFactory.initDriver(DriverTypes.ANDROID);
+        driver = DriverFactory.initDriver(DriverTypes.IOS);
     }
 
     @Test(description = "Launch DIY app and verify home page", groups = "regression", alwaysRun = true)
-    public void verifyHomePage() throws InterruptedException {
-        LoginPage loginPage = new LoginPage(androidDriver);
-        loginPage.login("","");
+    public void verifySingIn() {
+        KidsSignIn kidsSignIn = new KidsSignIn(driver);
+        kidsSignIn.setPreSignIn();
+        kidsSignIn.enterDetails("fita1", "deepa55");
     }
 }

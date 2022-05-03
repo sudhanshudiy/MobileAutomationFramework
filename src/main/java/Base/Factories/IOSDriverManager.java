@@ -1,7 +1,7 @@
-package Factories;
+package Base.Factories;
 
-import Interface.IDrivers;
-import Interface.ILogger;
+import Base.Interface.IDrivers;
+import Base.Interface.ILogger;
 import Util.ConfigUtil;
 import constants.Common;
 import io.appium.java_client.MobileElement;

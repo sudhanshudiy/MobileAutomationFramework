@@ -1,7 +1,7 @@
-package Factories;
+package Base.Factories;
 
 import constants.DriverTypes;
-import Interface.ILogger;
+import Base.Interface.ILogger;
 import io.appium.java_client.AppiumDriver;
 
 public class DriverFactory implements ILogger {

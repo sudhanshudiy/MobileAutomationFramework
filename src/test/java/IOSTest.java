@@ -1,9 +1,7 @@
 import Base.BaseTest;
-import Factories.DriverFactory;
+import Base.Factories.DriverFactory;
 import Pages.FreeTrailOption;
-import Pages.HomePage;
 import Pages.ParentSignUpPage;
-import Pages.SecretsOfDrawing;
 import constants.DriverTypes;
 import io.appium.java_client.AppiumDriver;
 import org.testng.annotations.BeforeClass;

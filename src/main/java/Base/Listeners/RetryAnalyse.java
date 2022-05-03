@@ -1,7 +1,7 @@
-package Listeners;
+package Base.Listeners;
 
 
-import Interface.ILogger;
+import Base.Interface.ILogger;
 import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;
 

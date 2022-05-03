@@ -1,6 +1,6 @@
 package Util;
 
-import Interface.ILogger;
+import Base.Interface.ILogger;
 
 import java.io.*;
 import java.net.URISyntaxException;

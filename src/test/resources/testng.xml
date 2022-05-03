@@ -3,7 +3,7 @@
 
 <suite name="Login Suite">
     <listeners>
-        <listener class-name="Listeners.MobileListener"/>
+        <listener class-name="Base.Listeners.MobileListener"/>
     </listeners>
     <test verbose="2" preserve-order="false" name="Test">
         <classes>

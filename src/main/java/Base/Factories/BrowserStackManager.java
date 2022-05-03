@@ -1,19 +1,15 @@
-package Factories;
+package Base.Factories;
 
-import Interface.IDrivers;
-import Interface.ILogger;
+import Base.Interface.IDrivers;
+import Base.Interface.ILogger;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.ios.IOSDriver;
-import io.appium.java_client.ios.IOSElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-import java.net.MalformedURLException;
 import java.net.URL;
 
-public class BrowserStackManager implements ILogger, IDrivers {
+class BrowserStackManager implements ILogger, IDrivers {
 
     private static AppiumDriver driver;
 

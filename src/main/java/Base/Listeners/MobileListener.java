@@ -1,10 +1,9 @@
-package Listeners;
+package Base.Listeners;
 
-import Factories.DriverFactory;
-import Interface.ILogger;
+import Base.Factories.DriverFactory;
+import Base.Interface.ILogger;
 import constants.DriverTypes;
 import io.appium.java_client.AppiumDriver;
-import io.qameta.allure.Allure;
 import io.qameta.allure.Attachment;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;

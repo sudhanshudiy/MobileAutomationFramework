@@ -1,27 +1,16 @@
 package Base;
 
-import Interface.ILogger;
-import Util.ConfigUtil;
+import Base.Interface.ILogger;
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
-import io.qameta.allure.internal.shadowed.jackson.databind.ObjectMapper;
-import jdk.nashorn.internal.parser.JSONParser;
-import org.checkerframework.checker.units.qual.C;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
 import java.io.*;
-import java.net.URL;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
 
 public class BaseTest implements ILogger {
 

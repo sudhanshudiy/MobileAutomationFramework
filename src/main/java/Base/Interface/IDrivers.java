@@ -1,4 +1,4 @@
-package Interface;
+package Base.Interface;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;

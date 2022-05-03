@@ -32,6 +32,7 @@ class AndroidDriverManager implements ILogger, IDrivers {
         desiredCapabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, Common.UIAUTOMATOR);
         desiredCapabilities.setCapability("APP_PACKAGE", Common.APP_PACKAGE);
         desiredCapabilities.setCapability("APP_ACTIVITY", Common.APP_ACTIVITY);
+        desiredCapabilities.setCapability("app", "bs://9c93bfa23f8fb86493cf3323ca1985dc7d4384ce");
         desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "ANDROID");
         return desiredCapabilities;
     }

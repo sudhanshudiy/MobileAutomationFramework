@@ -1,6 +1,9 @@
 import Base.BaseTest;
 import Factories.DriverFactory;
+import Pages.FreeTrailOption;
 import Pages.HomePage;
+import Pages.ParentSignUpPage;
+import Pages.SecretsOfDrawing;
 import constants.DriverTypes;
 import io.appium.java_client.AppiumDriver;
 import org.testng.annotations.BeforeClass;
@@ -17,7 +20,19 @@ public class IOSTest extends BaseTest {
 
     @Test(description = "Launch DIY app and verify home page", groups = "regression", alwaysRun = true)
     public void verifyHomePage() {
-       /* HomePage homePage = new HomePage(driver);
-        homePage.clickNfc();*/
+        FreeTrailOption freeTrailOption = new FreeTrailOption(driver);
+        freeTrailOption.waitBeforeClickingTrailButton();
+    }
+
+    @Test(description = "Launch Singup free trail user page", groups = "regression", alwaysRun = true)
+    public void verifyFreeTrail() {
+        FreeTrailOption freeTrailOption = new FreeTrailOption(driver);
+        freeTrailOption.waitBeforeClickingTrailButton();
+    }
+
+    @Test(description = "Launch DIY app and verify home page", groups = "regression", alwaysRun = true)
+    public void SingupFreeTrail() {
+        ParentSignUpPage parentSignUpPage = new ParentSignUpPage(driver);
+        parentSignUpPage.enterDetails("Sudhanshu", "Singh", "sudhanshu11@gmail.com");
     }
 }

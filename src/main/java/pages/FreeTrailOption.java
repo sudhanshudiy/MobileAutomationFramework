@@ -1,4 +1,4 @@
-package Pages;
+package pages;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
@@ -10,34 +10,36 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class HomePage {
+public class FreeTrailOption {
 
     private AppiumDriver driver;
 
-    public HomePage(AppiumDriver driver) {
+    public FreeTrailOption(AppiumDriver driver) {
         this.driver = driver;
         PageFactory.initElements(new AppiumFieldDecorator(driver, Duration.ofSeconds(8)), this);
     }
 
-    @FindBy(xpath = "//*[@text ='Art & Craft']")
-    private WebElement nfcElement;
+    @FindBy(xpath = "//*[@name= 'Start FREE Trial']")
+    private WebElement freeTrialButton;
 
-    public boolean isEnabled() {
-        return nfcElement.isEnabled();
+    @FindBy(xpath = "//*[@name= 'Sign In' ]")
+    private WebElement signInButton;
+
+    private boolean isEnabled() {
+        return freeTrialButton.isEnabled();
     }
 
-    public void waitForVisibility(WebElement nfcElement) {
+    private void waitForVisibility(WebElement nfcElement) {
         WebDriverWait wait = new WebDriverWait(driver, 10000);
         wait.until(ExpectedConditions.visibilityOf(nfcElement));
     }
 
-    public void clickNfc() {
-        nfcElement.click();
+    private void clickNfc() {
+        freeTrialButton.click();
     }
 
-
-    public void waitBeforeClickingNfc() throws InterruptedException {
-        waitForVisibility(nfcElement);
+    public void waitBeforeClickingTrailButton() {
+        waitForVisibility(freeTrialButton);
         isEnabled();
         clickNfc();
     }

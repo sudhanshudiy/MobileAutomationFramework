@@ -1,4 +1,5 @@
-package Pages;
+package pages;
+
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.WebElement;
@@ -9,20 +10,29 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class SecretsOfDrawing {
+public class HomePage {
 
     private AppiumDriver driver;
 
-    public SecretsOfDrawing(AppiumDriver driver) {
+    public HomePage(AppiumDriver driver) {
         this.driver = driver;
         PageFactory.initElements(new AppiumFieldDecorator(driver, Duration.ofSeconds(8)), this);
     }
 
-    @FindBy(xpath = "//*[@text ='View Course']")
-    private WebElement secretOfDrawing;
+    @FindBy(xpath = "//*[@text ='Art & Craft']")
+    private WebElement nfcElement;
+
+    @FindBy(xpath = "//XCUIElementTypeImage[@name='nav-challenges-inactive']")
+    private WebElement challengesTab;
+
+    @FindBy(xpath = "//XCUIElementTypeImage[@name='nav-notifications-inactive']")
+    private WebElement activityTab;
+
+    @FindBy(xpath = "//XCUIElementTypeImage[@name='nav-notifications-inactive']")
+    private WebElement profileTab;
 
     public boolean isEnabled() {
-        return secretOfDrawing.isEnabled();
+        return nfcElement.isEnabled();
     }
 
     public void waitForVisibility(WebElement nfcElement) {
@@ -30,14 +40,14 @@ public class SecretsOfDrawing {
         wait.until(ExpectedConditions.visibilityOf(nfcElement));
     }
 
-    public void click() {
-        secretOfDrawing.click();
+    public void clickNfc() {
+        nfcElement.click();
     }
 
 
-    public void waitBeforeClicking() throws InterruptedException {
-        waitForVisibility(secretOfDrawing);
+    public void waitBeforeClickingNfc() throws InterruptedException {
+        waitForVisibility(nfcElement);
         isEnabled();
-        click();
+        clickNfc();
     }
 }

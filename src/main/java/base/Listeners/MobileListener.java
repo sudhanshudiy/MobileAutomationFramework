@@ -1,7 +1,7 @@
-package Base.Listeners;
+package base.Listeners;
 
-import Base.Factories.DriverFactory;
-import Base.Interface.ILogger;
+import base.factories.DriverFactory;
+import base.Interface.ILogger;
 import constants.DriverTypes;
 import io.appium.java_client.AppiumDriver;
 import io.qameta.allure.Attachment;

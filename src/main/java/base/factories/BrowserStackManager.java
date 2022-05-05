@@ -1,7 +1,7 @@
-package Base.Factories;
+package base.factories;
 
-import Base.Interface.IDrivers;
-import Base.Interface.ILogger;
+import base.Interface.IDrivers;
+import base.Interface.ILogger;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;

@@ -1,6 +1,6 @@
-package Base;
+package base;
 
-import Base.Interface.ILogger;
+import base.Interface.ILogger;
 import com.google.gson.Gson;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.service.local.AppiumDriverLocalService;

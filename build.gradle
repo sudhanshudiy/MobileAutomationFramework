@@ -42,6 +42,20 @@ test {
     }
 }
 
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src'
+            exclude '**/Test*.java'
+        }
+        resources {
+            include '**/*.'
+            include 'META-INF/services/**'
+        }
+    }
+}
+
 task FatJar(type: Jar) {
     manifest {
         attributes('Implementation-Title': project.name,

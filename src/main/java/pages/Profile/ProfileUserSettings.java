@@ -1,4 +1,5 @@
-package pages;
+package pages.Profile;
+
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.WebElement;
@@ -9,35 +10,37 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class SecretsOfDrawing {
+public class ProfileUserSettings {
 
     private AppiumDriver driver;
 
-    public SecretsOfDrawing(AppiumDriver driver) {
+    public ProfileUserSettings(AppiumDriver driver) {
         this.driver = driver;
         PageFactory.initElements(new AppiumFieldDecorator(driver, Duration.ofSeconds(8)), this);
     }
 
-    @FindBy(xpath = "//*[@text ='View Course']")
-    private WebElement secretOfDrawing;
+    @FindBy(xpath = "//XCUIElementTypeStaticText[@name='View Course >']")
+    private WebElement viewCourses;
 
-    public boolean isEnabled() {
-        return secretOfDrawing.isEnabled();
+    @FindBy(xpath = "//*[@name= 'Sign In' ]")
+    private WebElement signInButton;
+
+    private boolean isEnabled() {
+        return viewCourses.isEnabled();
     }
 
-    public void waitForVisibility(WebElement nfcElement) {
+    private void waitForVisibility(WebElement nfcElement) {
         WebDriverWait wait = new WebDriverWait(driver, 10000);
         wait.until(ExpectedConditions.visibilityOf(nfcElement));
     }
 
-    public void click() {
-        secretOfDrawing.click();
+    private void clickNfc() {
+        viewCourses.click();
     }
 
-
-    public void waitBeforeClicking() throws InterruptedException {
-        waitForVisibility(secretOfDrawing);
+    public void waitBeforeClickingTrailButton() {
+        waitForVisibility(viewCourses);
         isEnabled();
-        click();
+        clickNfc();
     }
 }

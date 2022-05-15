@@ -1,13 +1,16 @@
-package pages;
+package pages.NonLogged;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 
 public class ParentSignUpPage {
 
@@ -30,7 +33,7 @@ public class ParentSignUpPage {
     @FindBy(xpath = "//XCUIElementTypeStaticText[@name= 'Sign In' ]")
     private WebElement signIn;
 
-    @FindBy(xpath = "//XCUIElementTypeStaticText[@name= 'Parent Powers' ]")
+    @FindBy(xpath = "//XCUIElementTypeStaticText[@name='Parent Powers']")
     private WebElement pageHeader;
 
     @FindBy(xpath = "//XCUIElementTypeStaticText[@name= 'Next' ]")
@@ -40,9 +43,9 @@ public class ParentSignUpPage {
         return pageHeader.isEnabled();
     }
 
-    private void waitForVisibility(WebElement pageHeader) {
+    private void waitForVisibility(WebElement pageHeader) throws InterruptedException {
         WebDriverWait wait = new WebDriverWait(driver, 8);
-       // wait.until(ExpectedConditions.visibilityOf(pageHeader));
+        wait.until(ExpectedConditions.visibilityOf(pageHeader));
     }
 
     private void setNext() {
@@ -62,12 +65,12 @@ public class ParentSignUpPage {
     }
 
 
-    public void waitBeforeClickingTrailButton() {
+    public void waitBeforeClickingTrailButton() throws InterruptedException {
         waitForVisibility(pageHeader);
         isEnabled();
     }
 
-    public void enterDetails(String firstname, String secondname, String email) {
+    public void enterDetails(String firstname, String secondname, String email) throws InterruptedException {
         waitBeforeClickingTrailButton();
         FirstName(firstname);
         secondName(secondname);

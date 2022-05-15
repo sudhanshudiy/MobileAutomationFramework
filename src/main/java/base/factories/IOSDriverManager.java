@@ -27,8 +27,8 @@ class IOSDriverManager implements ILogger, IDrivers {
         private IOSDriverManager(){}
 
         public DesiredCapabilities loadDesiredCap() {
-            desiredCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, Common.IOS_DEVICE_NAME);
-            desiredCapabilities.setCapability(MobileCapabilityType.UDID, Common.IOS_UUID );
+            desiredCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone 13 Pro");
+            desiredCapabilities.setCapability(MobileCapabilityType.UDID, "237CB16C-A94E-4730-A4CE-B3A43D8CB0F3" );
             desiredCapabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.IOS_XCUI_TEST);
             desiredCapabilities.setCapability("appPackage", Common.APP_PACKAGE);
             desiredCapabilities.setCapability("appActivity", Common.APP_ACTIVITY);

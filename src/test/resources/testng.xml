@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="Login Suite">
+<suite thread-count="1" verbose="1" name="signInSanity">
     <listeners>
-        <listener class-name="Base.Listeners.MobileListener"/>
+        <listener class-name="base.Listeners.MobileListener"/>
     </listeners>
-    <test verbose="2" preserve-order="false" name="Test">
+    <test name="signInSanity">
         <classes>
-            <class name="ValidateLogin"/>
+            <class name="ActivityPostUpload"/>
         </classes>
     </test>
 </suite>

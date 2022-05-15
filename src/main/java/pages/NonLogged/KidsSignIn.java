@@ -1,4 +1,4 @@
-package pages;
+package pages.NonLogged;
 
 import base.Interface.ILogger;
 import io.appium.java_client.AppiumDriver;
@@ -36,15 +36,6 @@ public class KidsSignIn implements ILogger {
     @FindBy(xpath = "//*[@name= 'Sign In']")
     private MobileElement SignIn;
 
-    @FindBy(xpath = "//XCUIElementTypeStaticText[@name= 'Full access. FREE for 14 days.']")
-    private WebElement PreSignInHeader;
-
-    @FindBy(xpath = "//XCUIElementTypeStaticText[@name= 'paywall-background']")
-    private MobileElement payWallHeader;
-
-    @FindBy(xpath = "//XCUIElementTypeStaticText[@name= 'DIY Highlights!']")
-    private MobileElement diyHighLights;
-
     private boolean isEnabled() {
         return pageHeader.isEnabled();
     }
@@ -57,26 +48,11 @@ public class KidsSignIn implements ILogger {
         wait.until(ExpectedConditions.visibilityOf(pageHeader));
     }
 
-    private boolean waiting() {
-        boolean isElementPresent;
-
-        try {
-            WebDriverWait wait = new WebDriverWait(driver, 8);
-            wait.until(ExpectedConditions.visibilityOf(diyHighLights));
-            MobileElement mobileElement = (MobileElement) driver.findElementByXPath(String.valueOf(diyHighLights));
-            isElementPresent = mobileElement.isDisplayed();
-            return isElementPresent;
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-            return false;
-        }
-    }
-
     private void userName(String username) {
         nickName.sendKeys(username);
     }
 
-    private void setPassword(String pass) {
+    private void password(String pass) {
         password.sendKeys(pass);
     }
 
@@ -84,23 +60,15 @@ public class KidsSignIn implements ILogger {
         SignIn.click();
     }
 
-    private void waitBeforeClickingTrailButton() {
-        waitForVisibility(pageHeader);
+    private void waitBeforeClickingTrailButton(WebElement webElement) {
+        waitForVisibility(webElement);
         isEnabled();
     }
 
-    public void setPreSignIn() {
-        if (waiting()) {
-            setSignIn();
-        } else {
-            log.error("failed to locate the Sign In Element!!");
-        }
-    }
-
     public void enterDetails(String name, String password) {
-        waitBeforeClickingTrailButton();
+        waitBeforeClickingTrailButton(pageHeader);
         userName(name);
-        setPassword(password);
+        password(password);
         setSignIn();
     }
 }

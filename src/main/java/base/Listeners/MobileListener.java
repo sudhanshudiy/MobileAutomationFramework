@@ -1,48 +1,50 @@
 package base.Listeners;
 
-import base.factories.DriverFactory;
+import base.BaseTest;
 import base.Interface.ILogger;
-import constants.DriverTypes;
 import io.appium.java_client.AppiumDriver;
 import io.qameta.allure.Attachment;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
 import org.testng.*;
 import org.testng.annotations.ITestAnnotation;
 import org.testng.xml.XmlSuite;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
 public class MobileListener implements ITestNGListener, ITestListener, IAnnotationTransformer, ISuiteListener, IReporter, ILogger {
 
     @Override
-    public void onTestStart(ITestResult result) {
-        log.info(" starting suite ...........::::" + result.getName() + " and started at in milliSeconds ::" + result.getStartMillis());
+    public void onStart(ITestContext context) {
+        log.info(" starting test ...........::::" + context.getName());
+        context.setAttribute("AppiumDriver", BaseTest.getDriver());
     }
 
     @Override
     public void onTestFailure(ITestResult result) {
-        String testName = result.getName();
-       // Set<ITestResult> iTestResultSet = result.getTestContext().getFailedTests().getAllResults();
-        //System.out.println("I am in onTestFailure method " + getTestMethodName(iTestResult) + " failed");
-        AppiumDriver driver = DriverFactory.initDriver(DriverTypes.ANDROID);
-        if (driver instanceof WebDriver) {
-         //   System.out.println("Screenshot captured for test case:" + getTestMethodName(iTestResult));
-            saveFailureScreenShot(driver);
+        log.error("Test Failed on Method :: " + result.getTestContext().getFailedTests().getAllMethods());
+        AppiumDriver driver = BaseTest.getDriver();
+        try {
+            if (driver != null) {
+                saveFailureScreenShot(driver);
+            }
+        } catch (Exception e) {
+           saveText("failed to take screenshot ::->::" + getTestMethodName(result));
         }
     }
 
     @Override
     public void onTestSkipped(ITestResult result) {
+        Set<ITestResult> filtered = new HashSet<>();
         log.info("total test cases skipped :::" + result.getSkipCausedBy().size());
         Set<ITestResult> iTestResultSet = result.getTestContext().getSkippedTests().getAllResults();
         if (!iTestResultSet.isEmpty()) {
-            Set<ITestResult> set = result.getTestContext().getSkippedTests().getAllResults();
-          //  set.stream().forEach();
+             result.getTestContext().getSkippedTests().getAllResults().stream()
+                     .filter(e -> e.getStatus() == 3).forEach(e-> System.out.println("Skipped test is :" + e.getName()));
         }
     }
 
@@ -54,15 +56,8 @@ public class MobileListener implements ITestNGListener, ITestListener, IAnnotati
 
     @Override
     public void onFinish(ITestContext context) {
-    }
-
-    @Override
-    public void onTestSuccess(ITestResult result) {
-        if (result.isSuccess())
-            log.info("Test Passed successfully");
-        else{
-            log.error("Test failed ::: " + result.getTestContext().getFailedTests());
-        }
+      context.getSkippedTests().getAllResults().stream().filter(e-> e.getStatus() == 3).forEach(ITestResult::getName);
+      context.getSkippedTests().getAllResults().stream().filter(e-> e.getStatus() == 1).forEach(ITestResult::getName);
     }
 
     @Override
@@ -91,8 +86,12 @@ public class MobileListener implements ITestNGListener, ITestListener, IAnnotati
         return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
     }
 
-    public void getTestMethodName(ITestResult iTestResult){
-        Set<ITestResult> iTestResultSet = iTestResult.getTestContext().getFailedTests().getAllResults();
-        iTestResultSet.stream().forEach(System.out::println);
+    @Attachment(value = "{0}", type = "text/plain")
+    public static String saveText(String message) {
+        return message;
+    }
+
+    public String getTestMethodName(ITestResult iTestResult) {
+        return iTestResult.getMethod().getMethodName();
     }
 }

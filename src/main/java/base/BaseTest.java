@@ -1,27 +1,29 @@
 package base;
 
 import base.Interface.ILogger;
-import com.google.gson.Gson;
+import base.factories.DriverFactory;
+import constants.DriverTypes;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
-import java.io.*;
+import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
 public class BaseTest implements ILogger {
 
     AppiumServiceBuilder appiumServiceBuilder;
-    Map<String,String> map = new HashMap<>();
+    Map<String, String> map = new HashMap<>();
     private static AppiumDriverLocalService server;
-    Gson gson;
-    AppiumDriver driver;
+
+
+    public static ThreadLocal<AppiumDriver> driverThreadLocal = new ThreadLocal<>();
 
     @BeforeClass
-    public void initAppium() throws IOException {
+    public void initAppium() {
         appiumServiceBuilder = new AppiumServiceBuilder();
         appiumServiceBuilder.usingAnyFreePort();
         appiumServiceBuilder.usingDriverExecutable(new File("/usr/local/bin/node"));
@@ -33,13 +35,22 @@ public class BaseTest implements ILogger {
         if (!server.isRunning()) {
             server.start();
         }
-        /*gson = new GsonBuilder().setPrettyPrinting().create();
-        InputStream inputStream = BaseTest.class.getClassLoader().getResourceAsStream("device_config.json");
-        System.out.println("Building Desired properties as defined in :: 'device_config.json' ::" +
-                gson.toJson(inputStream));*/
     }
 
-        @AfterClass
+    /**
+     * Creating shareable driver across multiple classes
+     * @return
+     */
+    public AppiumDriver initializeDriver() {
+        driverThreadLocal.set(DriverFactory.initDriver(DriverTypes.IOS));
+        return getDriver();
+    }
+
+    public static synchronized AppiumDriver getDriver() {
+        return driverThreadLocal.get();
+    }
+
+    @AfterClass
     public static void stopAppiumServer() {
         server.stop();
     }

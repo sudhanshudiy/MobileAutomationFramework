@@ -1,4 +1,4 @@
-package pages;
+package pages.NonLogged;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
@@ -22,15 +22,15 @@ public class FreeTrailOption {
     @FindBy(xpath = "//*[@name= 'Start FREE Trial']")
     private WebElement freeTrialButton;
 
-    @FindBy(xpath = "//*[@name= 'Sign In' ]")
-    private WebElement signInButton;
+    @FindBy(xpath = "//*[@name='Get full access. FREE for 14 days.']")
+    private WebElement trialPeriod;
 
     private boolean isEnabled() {
-        return freeTrialButton.isEnabled();
+        return trialPeriod.isEnabled();
     }
 
     private void waitForVisibility(WebElement nfcElement) {
-        WebDriverWait wait = new WebDriverWait(driver, 10000);
+        WebDriverWait wait = new WebDriverWait(driver, 8);
         wait.until(ExpectedConditions.visibilityOf(nfcElement));
     }
 
@@ -39,7 +39,7 @@ public class FreeTrailOption {
     }
 
     public void waitBeforeClickingTrailButton() {
-        waitForVisibility(freeTrialButton);
+        waitForVisibility(trialPeriod);
         isEnabled();
         clickNfc();
     }

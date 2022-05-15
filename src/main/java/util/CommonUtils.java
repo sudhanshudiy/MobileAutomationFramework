@@ -3,12 +3,21 @@ package util;
 import io.appium.java_client.AppiumDriver;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 
 import java.io.File;
 import java.io.IOException;
 
 public class CommonUtils {
+
+    static AppiumDriver driver;
+
+    public CommonUtils(AppiumDriver driver)
+    {
+        this.driver = driver;
+        PageFactory.initElements(driver, this);
+    }
 
     /**
      * @param machineName
@@ -28,26 +37,11 @@ public class CommonUtils {
 
     /**
      * Create Screenshots
-     * @param name
+     * @param path
      * @throws IOException
      */
-    public static void getScreenshot(String name, AppiumDriver driver) throws IOException {
-        File file  = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(file, new File(System.getProperty("user.dir")+ "\\" + name+".jpg"));
-    }
-
-    /**
-     * @param locator
-     * @return
-     */
-    public ExpectedCondition<Boolean> elementFoundAndClicked(By locator) {
-        return new ExpectedCondition<Boolean>() {
-            @Override
-            public Boolean apply(WebDriver driver) {
-                WebElement element = driver.findElement(locator);
-                element.click();
-                return true;
-            }
-        };
+    public static void getScreenshot(String path) throws IOException {
+        File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(file, new File(System.getProperty("user.dir") + "\\" + path + ".jpg"));
     }
 }

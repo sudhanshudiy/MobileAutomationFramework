@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import util.CommonPageActions;
 
 import java.time.Duration;
 
@@ -76,6 +77,8 @@ public class ActivityPage {
 
     public void verifyUserStories() {
         waitForVisibility(pageHeader);
-        //firstStory.click();
+
+        // Click on the firstPost in ALl Feeds
+        new CommonPageActions().TouchActions(driver, 251, 345, 1);
     }
 }

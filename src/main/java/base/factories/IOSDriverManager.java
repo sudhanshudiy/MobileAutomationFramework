@@ -2,7 +2,6 @@ package base.factories;
 
 import base.Interface.IDrivers;
 import base.Interface.ILogger;
-import util.ConfigUtil;
 import constants.Common;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
@@ -10,6 +9,7 @@ import io.appium.java_client.remote.AutomationName;
 import io.appium.java_client.remote.MobileCapabilityType;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import util.ConfigUtil;
 
 import java.io.File;
 import java.net.URL;

@@ -1,23 +1,11 @@
 package util;
 
-import io.appium.java_client.AppiumDriver;
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.*;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-
-import java.io.File;
 import java.io.IOException;
+import java.time.Instant;
+import java.time.LocalTime;
+import java.time.ZoneId;
 
 public class CommonUtils {
-
-    static AppiumDriver driver;
-
-    public CommonUtils(AppiumDriver driver)
-    {
-        this.driver = driver;
-        PageFactory.initElements(driver, this);
-    }
 
     /**
      * @param machineName
@@ -36,12 +24,25 @@ public class CommonUtils {
     }
 
     /**
-     * Create Screenshots
-     * @param path
-     * @throws IOException
+     * @return epoch Time in Miliseconds
      */
-    public static void getScreenshot(String path) throws IOException {
-        File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(file, new File(System.getProperty("user.dir") + "\\" + path + ".jpg"));
+    public long getCurrentTimeStampInMili(){
+        Instant instant = Instant.now();
+        return instant.toEpochMilli();
+    }
+
+    /**
+     * Local time with Zone id e.g 'GMT+5:30' etc.
+     */
+    public LocalTime getCurrentTimeStampWithZoneId(String zoneTime){
+        return LocalTime.now(ZoneId.of(zoneTime));
+    }
+
+    /**
+     * concat string
+     * @return
+     */
+    public String stringConcat(String toConcat){
+        return String.join(toConcat);
     }
 }

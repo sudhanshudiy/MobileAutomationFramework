@@ -1,17 +1,13 @@
 import base.BaseTest;
-import base.Listeners.MobileListener;
-import base.factories.DriverFactory;
-import constants.DriverTypes;
 import dataProviders.UserData;
 import io.appium.java_client.AppiumDriver;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Step;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-import pages.NonLogged.FreeTrailPayWall;
 import pages.NonLogged.FreeTrailOption;
+import pages.NonLogged.FreeTrailPayWall;
 import pages.NonLogged.KidsSignIn;
 import pages.Profile.ProfilePage;
 

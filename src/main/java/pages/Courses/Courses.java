@@ -48,6 +48,11 @@ public class Courses {
         viewCourses.click();
     }
 
+    public void verifyCoursesPageHeader(){
+        waitForVisibility(viewCourses);
+        isEnabled();
+    }
+
     public void waitBeforeClickingTrailButton() {
         waitForVisibility(viewCourses);
         isEnabled();

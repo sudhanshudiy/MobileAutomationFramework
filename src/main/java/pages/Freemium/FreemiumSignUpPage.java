@@ -1,4 +1,4 @@
-package pages;
+package pages.Freemium;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.FluentWait;
 import util.CommonPageActions;
 
 import java.time.Duration;
+import java.util.List;
 
 public class FreemiumSignUpPage {
 
@@ -41,8 +42,15 @@ public class FreemiumSignUpPage {
     @FindBy(xpath = "//XCUIElementTypeStaticText[@name='Learning is FREE on DIY']")
     private WebElement pageHeader;
 
+    @FindBy(xpath = "//XCUIElementTypeButton[@name='Done']")
+    private WebElement datePickerDone;
+
+    @FindBy(xpath = "//XCUIElementTypeButton[@name='Cancel']")
+    private WebElement datePickerCancel;
+
 
     private void waitForVisibility(WebElement pageHeader) {
+        System.out.println(driver.getPageSource());
         FluentWait wait = new FluentWait(driver)
                 .withTimeout(Duration.ofSeconds(8))
                 .pollingEvery(Duration.ofSeconds(1))
@@ -61,11 +69,14 @@ public class FreemiumSignUpPage {
         waitForVisibility(pageHeader);
         pageHeader.isEnabled();
         firstName.sendKeys(firstname);
-        birthday.sendKeys(birthDay);
+        new CommonPageActions().singleTapAction(driver, birthday);
+        List<WebElement> list =  driver.findElementsByXPath("//XCUIElementTypePicker");
+        list.stream().forEach(System.out::println);
+        /*birthday.sendKeys(birthDay);
         createUser.sendKeys(userName);
         createPassword.sendKeys(password);
         parentEmail.sendKeys(parentemail);
-        driver.hideKeyboard();
+        driver.hideKeyboard();*/
     }
 
     public void tapJoinNow(){

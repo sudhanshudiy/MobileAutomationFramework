@@ -1,4 +1,4 @@
-package pages;
+package pages.Freemium;
 
 import base.Interface.ILogger;
 import io.appium.java_client.AppiumDriver;

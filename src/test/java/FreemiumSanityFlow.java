@@ -5,9 +5,9 @@ import io.appium.java_client.AppiumDriver;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pages.Activity.ActivityPage;
-import pages.Courses.Courses;
-import pages.FreemiumBlockerScreen;
-import pages.FreemiumSignUpPage;
+import pages.Courses.Library;
+import pages.Freemium.FreemiumBlockerScreen;
+import pages.Freemium.FreemiumSignUpPage;
 import util.CommonPageActions;
 
 public class FreemiumSanityFlow {
@@ -36,8 +36,8 @@ public class FreemiumSanityFlow {
     @Test(priority = 3, description = "Verify all the restrictions for a freemium user", groups = "regression, sanity", alwaysRun = true,
             dataProviderClass = UserData.class, dataProvider = "singUpDetails")
     public void verifyFreemiumRestrictions(String firstname, String dob, String signupname, String password, String email) {
-        Courses courses = new Courses(driver);
-        courses.verifyCoursesPageHeader();
+        Library courses = new Library(driver);
+        courses.verifyPageAndClickStickyCTA();
         ActivityPage activityPage = new ActivityPage(driver);
         activityPage.verifyPageAndPost();
         CommonPageActions.paywallScreen(driver);

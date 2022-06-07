@@ -2,12 +2,13 @@ package util;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.TouchAction;
+import io.appium.java_client.touch.offset.PointOption;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.touch.TouchActions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
-import pages.PaywallScreen;
+import pages.Freemium.PaywallScreen;
 
 import static io.appium.java_client.touch.WaitOptions.waitOptions;
 import static io.appium.java_client.touch.offset.PointOption.point;
@@ -28,6 +29,10 @@ public class CommonPageActions {
                 .waitAction(waitOptions(ofSeconds(timeOut)))
                 .release()
                 .perform();
+    }
+
+    public void tapWithCoordinates(AppiumDriver driver, int x, int y, int timeout){
+        new TouchAction(driver).tap(new PointOption().withCoordinates(x, y)).perform();
     }
 
     /**
@@ -69,5 +74,15 @@ public class CommonPageActions {
     public static void paywallScreen(AppiumDriver driver) {
         PaywallScreen paywallScreen = new PaywallScreen(driver);
         paywallScreen.verifyScreenAndClose();
+    }
+
+    public static void datePickerWheelScrollAction(AppiumDriver driver) {
+        /*direction = "previous"; // "previous" or "next";
+        offset = "0.15";
+        HashMap<String, Object> params = new HashMap<>();
+        params.put("order", direction);
+        params.put("offset", offset);
+        params.put("element", (pickerWheeIElement.get(0)).getId());
+        driver.executeScript("mobile: selectPickerWheelValue", params);*/
     }
 }

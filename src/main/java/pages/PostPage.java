@@ -27,6 +27,9 @@ public class PostPage implements ILogger {
     @FindBy(xpath = "//XCUIElementTypeButton[@name='post actions heart']")
     private WebElement mainLikeButton;
 
+    @FindBy(xpath = "//XCUIElementTypeImage[@name='post-heart']")
+    private WebElement subLike;
+
     @FindBy(xpath = "//XCUIElementTypeButton[@name='global more']")
     private WebElement reportPost;
 
@@ -36,9 +39,30 @@ public class PostPage implements ILogger {
     @FindBy(xpath = "//XCUIElementTypeButton[@name='comments send']")
     private WebElement postComment;
 
+    @FindBy(xpath = "//XCUIElementTypeButton[@name='nav back']")
+    private WebElement backButton;
+
 
 
     public void writeComment() {
         new CommonPageActions().TouchActions(driver, 78,758, 1);
+    }
+
+    public void likePost() {
+       if (mainLikeButton.isDisplayed()){
+           mainLikeButton.click();
+       }else{
+           log.error("main Like button unavailable for clicking...");
+       }
+    }
+
+    public void reportPost() {
+        if (reportPost.isEnabled())
+            reportPost.click();
+    }
+
+    public void navigateBack(){
+        backButton.isDisplayed();
+        backButton.click();
     }
 }

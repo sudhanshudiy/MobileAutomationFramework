@@ -1,3 +1,4 @@
+import base.BaseTest;
 import base.factories.DriverFactory;
 import constants.DriverTypes;
 import dataProviders.UserData;
@@ -10,7 +11,7 @@ import pages.Freemium.FreemiumBlockerScreen;
 import pages.Freemium.FreemiumSignUpPage;
 import util.CommonPageActions;
 
-public class FreemiumSanityFlow {
+public class FreemiumSanityFlow extends BaseTest {
 
     private AppiumDriver driver;
 
@@ -27,10 +28,9 @@ public class FreemiumSanityFlow {
 
     @Test(priority = 2, description = "Launch DIY app and verify home page", groups = "regression, sanity", alwaysRun = true,
             dataProviderClass = UserData.class, dataProvider = "singUpDetails")
-    public void verifyFreemiumSignUpPage(String firstname, String dob, String signupname, String password, String email) {
+    public void verifyFreemiumSignUpPage(String firstname, String[] dob, String signupname, String password, String email) {
         FreemiumSignUpPage freemiumSignUpPage = new FreemiumSignUpPage(driver);
         freemiumSignUpPage.signUpWithDetails(firstname, dob, signupname, password, email);
-        freemiumSignUpPage.tapJoinNow();
     }
 
     @Test(priority = 3, description = "Verify all the restrictions for a freemium user", groups = "regression, sanity", alwaysRun = true,

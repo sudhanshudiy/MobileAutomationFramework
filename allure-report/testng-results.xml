@@ -2,19 +2,23 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Gradle suite" duration-ms="159" started-at="2022-05-03T20:02:03 IST" finished-at="2022-05-03T20:02:03 IST">
+  <suite name="Gradle suite" duration-ms="686" started-at="2022-06-13T00:56:52 IST" finished-at="2022-06-13T00:56:53 IST">
     <groups>
-      <group name="regression">
-        <method signature="ValidateLogin.verifySingIn()[pri:0, instance:ValidateLogin@597ab1cc]" name="verifySingIn" class="ValidateLogin"/>
-      </group> <!-- regression -->
+      <group name="regression, sanity">
+        <method signature="DatePicker.verifyHomePage()[pri:1, instance:DatePicker@37616fc3]" name="verifyHomePage" class="DatePicker"/>
+      </group> <!-- regression, sanity -->
     </groups>
-    <test name="Gradle test" duration-ms="159" started-at="2022-05-03T20:02:03 IST" finished-at="2022-05-03T20:02:03 IST">
-      <class name="ValidateLogin">
-        <test-method status="PASS" signature="check()[pri:0, instance:ValidateLogin@597ab1cc]" name="check" duration-ms="95" started-at="2022-05-03T20:02:03 IST" finished-at="2022-05-03T20:02:03 IST">
+    <test name="Gradle test" duration-ms="686" started-at="2022-06-13T00:56:52 IST" finished-at="2022-06-13T00:56:53 IST">
+      <class name="DatePicker">
+        <test-method status="PASS" signature="startDriver()[pri:0, instance:DatePicker@37616fc3]" name="startDriver" is-config="true" duration-ms="451" started-at="2022-06-13T00:56:52 IST" finished-at="2022-06-13T00:56:53 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startDriver -->
+        <test-method status="PASS" signature="check()[pri:0, instance:DatePicker@37616fc3]" name="check" duration-ms="158" started-at="2022-06-13T00:56:53 IST" finished-at="2022-06-13T00:56:53 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- check -->
-      </class> <!-- ValidateLogin -->
+      </class> <!-- DatePicker -->
     </test> <!-- Gradle test -->
   </suite> <!-- Gradle suite -->
 </testng-results>

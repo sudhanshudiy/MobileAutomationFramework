@@ -4,11 +4,16 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.touch.offset.PointOption;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.touch.TouchActions;
+import org.openqa.selenium.remote.RemoteWebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import pages.Freemium.PaywallScreen;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import static io.appium.java_client.touch.WaitOptions.waitOptions;
 import static io.appium.java_client.touch.offset.PointOption.point;
@@ -56,6 +61,30 @@ public class CommonPageActions {
     }
 
     /**
+     * Touch Actions Func
+     * @param driver
+     */
+    public void scrollScreen(AppiumDriver driver, int x, int y) {
+        new TouchActions(driver)
+                .scroll(x ,y)
+                .perform();
+    }
+
+    /**
+     * Touch Actions Func
+     * @param driver
+     */
+    public void scrollScreenJS(AppiumDriver driver, WebElement element , String direction)  {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        Map<String, Object> params = new HashMap<>();
+        params.put("direction", direction);
+        params.put("element", ((RemoteWebElement) element).getId());
+        js.executeScript("mobile: swipe", params);
+    }
+
+
+
+    /**
      * @param locator
      * @return
      */
@@ -76,13 +105,13 @@ public class CommonPageActions {
         paywallScreen.verifyScreenAndClose();
     }
 
-    public static void datePickerWheelScrollAction(AppiumDriver driver) {
-        /*direction = "previous"; // "previous" or "next";
-        offset = "0.15";
-        HashMap<String, Object> params = new HashMap<>();
+    public static void datePickerWheelScrollAction(AppiumDriver driver, String direction, WebElement pickerElement) {
+        String offset = "0.15";
+        Map<String, Object> params = new HashMap<>();
         params.put("order", direction);
         params.put("offset", offset);
-        params.put("element", (pickerWheeIElement.get(0)).getId());
-        driver.executeScript("mobile: selectPickerWheelValue", params);*/
+        params.put("elementId", ((RemoteWebElement) pickerElement).getId());
+        //driver.executeScript("mobile: scroll", params);
+        driver.executeScript("mobile: selectPickerWheelValue", params);
     }
 }

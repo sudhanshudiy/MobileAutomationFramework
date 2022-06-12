@@ -69,7 +69,7 @@ public class MobileListener implements ITestNGListener, ITestListener, IAnnotati
     public void transform(ITestAnnotation annotation, Class testClass, Constructor testConstructor, Method testMethod) {
         if (isTestConfigured(annotation))
             annotation.setAlwaysRun(true);
-        annotation.setRetryAnalyzer(RetryAnalyse.class);
+       // annotation.setRetryAnalyzer(RetryAnalyse.class);
     }
 
 

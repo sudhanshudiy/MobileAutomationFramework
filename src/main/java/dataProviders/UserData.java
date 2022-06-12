@@ -5,8 +5,6 @@ import util.CommonUtils;
 
 public class UserData {
 
-
-
     @DataProvider(name = "valid creds")
     public Object[][] validCredentials() {
         return new Object [][] {{"Diya05", "deepa55"}};
@@ -26,6 +24,6 @@ public class UserData {
     public Object[][] signUpDetails() {
         CommonUtils commonUtils = new CommonUtils();
         String name = "".concat("free").concat(String.valueOf(commonUtils.getCurrentTimeStampInMili()));
-        return new Object [][] {{name, "May 22, 2022", name, "123456", "xyz@gmail.com"}};
+        return new Object [][] {{name, "July", "15", "2012", name, "123456", "xyz@gmail.com"}};
     }
 }

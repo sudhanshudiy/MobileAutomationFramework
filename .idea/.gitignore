@@ -1,13 +1,13 @@
 # Idea files
-.idea
+.idea/
 *.iml
 
 # Gradle
-.gradle
-build
+.gradle/
+build/
 
 # Allure
-allure-report
+allure-report/
 
 #Mac OS stuff
 .DS_Store

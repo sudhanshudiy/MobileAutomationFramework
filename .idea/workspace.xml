@@ -135,7 +135,7 @@
       <recent name="java" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.DatePicker.verifyHomePage">
+  <component name="RunManager" selected="Gradle.DatePicker.check">
     <configuration name="DatePicker (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -150,6 +150,29 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;DatePicker&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="DatePicker.check" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;DatePicker.check&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -205,27 +228,6 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="MobileAutomationFramework [printSourceSets]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="printSourceSets" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
     <configuration name="/Users/itrs-2079/IdeaProjects/MobileAutomationFramework/src/test/resources/FreemiumE2E.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MobileAutomationFramework.test" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/FreemiumE2E.xml" />
@@ -238,11 +240,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.DatePicker.check" />
         <item itemvalue="Gradle.DatePicker.verifyHomePage" />
         <item itemvalue="Gradle.DatePicker (1)" />
         <item itemvalue="TestNG./Users/itrs-2079/IdeaProjects/MobileAutomationFramework/src/test/resources/FreemiumE2E.xml" />
         <item itemvalue="Gradle.FreemiumE2E.verifyFreemiumRestrictions" />
-        <item itemvalue="Gradle.MobileAutomationFramework [printSourceSets]" />
       </list>
     </recent_temporary>
   </component>

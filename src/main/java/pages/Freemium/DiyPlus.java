@@ -3,7 +3,6 @@ package pages.Freemium;
 import base.Interface.ILogger;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -36,11 +35,9 @@ public class DiyPlus implements ILogger {
 
 
     private void waitForVisibility(WebElement pageHeader) {
-        System.out.println(driver.getPageSource());
         FluentWait wait = new FluentWait(driver)
                 .withTimeout(Duration.ofSeconds(8))
-                .pollingEvery(Duration.ofSeconds(1))
-                .ignoring(NoSuchElementException.class);
+                .pollingEvery(Duration.ofSeconds(1));
         wait.until(ExpectedConditions.visibilityOf(pageHeader));
     }
 

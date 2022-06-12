@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="27ccec05-bb1c-474c-bf7c-fdd5035b5fc0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-report/Gradle suite/Gradle test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-report/Gradle suite/Gradle test.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-report/Gradle suite/testng-failed.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-report/bullet_point.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-report/collapseall.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-report/emailable-report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-report/failed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-report/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-report/jquery-3.4.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-report/junitreports/TEST-IOSTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-report/junitreports/TEST-ValidateLogin.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-report/navigator-bullet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-report/old/Gradle suite/Gradle test.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-report/old/Gradle suite/classes.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-report/old/Gradle suite/groups.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-report/old/Gradle suite/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-report/old/Gradle suite/main.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-report/old/Gradle suite/methods-alphabetical.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-report/old/Gradle suite/methods-not-run.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-report/old/Gradle suite/methods.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-report/old/Gradle suite/reporter-output.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-report/old/Gradle suite/testng.xml.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-report/old/Gradle suite/toc.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-report/old/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-report/passed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-report/skipped.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-report/testng-failed.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-report/testng-reports.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-report/testng-reports.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-report/testng-results.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-report/testng.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/1fb81b1a-4d63-49f2-9943-9c3edbbb0381-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/2d282486-ba25-49bf-be70-64de99983548-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/39400e33-4dae-4ea1-827e-653312f5106d-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/53054a4e-6d28-4b90-90bb-800c6db1e73f-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/61231406-f790-44a7-84b6-69395b8c69ce-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/6db35f50-050e-4e0d-84ef-af6eecb2e8f8-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/b4a2c974-ecc8-4209-9840-35f432394af9-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/e6b179af-163b-49e7-944b-49a2b7e543b3-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/ec7d439e-4d16-4561-8bb0-d926c115eaa2-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/some_file" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/FreemiumSanityFlow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/FreemiumSanityFlow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/ActivityPostUpload.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/ActivityPostUpload.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/FreemiumE2E.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/FreemiumE2E.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testng.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="DockDockBuild.Settings">
+    <option name="codePath" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="MobileAutomationFramework" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="28L9yrzSo898EWlzxAeoE532UnK" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+      <recent name="java" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.DatePicker.verifyHomePage">
+    <configuration name="DatePicker (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;DatePicker&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="DatePicker.verifyHomePage" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;DatePicker.verifyHomePage&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="FreemiumE2E.verifyFreemiumRestrictions" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;FreemiumE2E.verifyFreemiumRestrictions&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="MobileAutomationFramework [printSourceSets]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="printSourceSets" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="/Users/itrs-2079/IdeaProjects/MobileAutomationFramework/src/test/resources/FreemiumE2E.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MobileAutomationFramework.test" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/FreemiumE2E.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.DatePicker.verifyHomePage" />
+        <item itemvalue="Gradle.DatePicker (1)" />
+        <item itemvalue="TestNG./Users/itrs-2079/IdeaProjects/MobileAutomationFramework/src/test/resources/FreemiumE2E.xml" />
+        <item itemvalue="Gradle.FreemiumE2E.verifyFreemiumRestrictions" />
+        <item itemvalue="Gradle.MobileAutomationFramework [printSourceSets]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="27ccec05-bb1c-474c-bf7c-fdd5035b5fc0" name="Changes" comment="" />
+      <created>1650985257379</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1650985257379</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/base/factories/BrowserStackManager.java</url>
+          <line>40</line>
+          <properties class="base.factories.BrowserStackManager">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

@@ -1,26 +1,13 @@
-# Default ignored files
-/shelf/
-/workspace.xml
-/*/.gradle
-/.idea
+# Idea files
+.idea
+*.iml
 
+# Gradle
 .gradle
-/build/
-/*/build/
-/sandbox/*/build/
-*.iml
-.idea/
-.allure
-/*/allure-results/
-/*/allure-report/
+build
 
-
-#IDEA Files
-.idea/*
-!.idea/vcs.xml
-!.idea/icon.png
-*.iml
-*.ipr
+# Allure
+allure-report
 
 #Mac OS stuff
 .DS_Store

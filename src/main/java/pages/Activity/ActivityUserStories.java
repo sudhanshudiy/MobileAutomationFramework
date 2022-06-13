@@ -3,6 +3,7 @@ package pages.Activity;
 import base.Interface.ILogger;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -10,6 +11,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 
 public class ActivityUserStories implements ILogger {
 
@@ -19,6 +21,12 @@ public class ActivityUserStories implements ILogger {
         this.driver = driver;
         PageFactory.initElements(new AppiumFieldDecorator(driver, Duration.ofSeconds(8)), this);
     }
+
+    @FindBy(xpath = "//*/XCUIElementTypeCell[2]/*/*/XCUIElementTypeImage")
+    private WebElement firstUserStory;
+
+    @FindBy(xpath = "//*/XCUIElementTypeCell[2]/*/XCUIElementTypeOther[3]/XCUIElementTypeImage")
+    private WebElement firstUserStoryPost;
 
     @FindBy(xpath = "//XCUIElementTypeButton[@name='Follow']")
     private WebElement followUser;
@@ -47,29 +55,73 @@ public class ActivityUserStories implements ILogger {
     @FindBy(xpath = "//XCUIElementTypeButton[@name='comments send']")
     private WebElement commentSend;
 
-    private void waitForVisibility(WebElement webElement) {
-        WebDriverWait wait = new WebDriverWait(driver, 8);
-        wait.until(ExpectedConditions.visibilityOf(webElement));
+    private boolean waitForVisibility(WebElement webElement) {
+        try {
+            WebDriverWait wait = new WebDriverWait(driver, TimeUnit.MILLISECONDS.toMillis(100));
+            wait.until(ExpectedConditions.visibilityOf(webElement));
+            return true;
+        } catch (NoSuchElementException noSuchElementException) {
+            System.out.println(noSuchElementException.getLocalizedMessage());
+        }
+        return false;
     }
 
     public void verifyUserStoryActions() {
         log.info("Performing free user story actions .......:---:....");
 
+        if (waitForVisibility(firstUserStory)){
+            firstUserStory.click();
+        }
+
         //Following or follow user
-        if (followUser.isDisplayed()){followUser.click();}
-        else {followingUser.click();}
+        if (waitForVisibility(followUser) && followUser.isDisplayed()) {
+            followUser.click();
+        } else {
+            followingUser.click();
+        }
+        globalClose.click();
+    }
+
+    public void volumeActions() {
+
+        if (waitForVisibility(firstUserStory)){
+            firstUserStory.click();
+        }
 
         //Volume on and Off
-        if (volumeOn.isEnabled()){volumeOn.click();}
-        else {volumeOff.click();}
+        if (waitForVisibility(volumeOn) || volumeOn.isEnabled()) {
+            volumeOn.click();
+        } else {
+            volumeOff.click();
+        }
+        globalClose.click();
+    }
+
+    public void likePost() {
+
+        if (waitForVisibility(firstUserStory)){
+            firstUserStory.click();
+        }
 
         //like on story
         likeStory.click();
+        globalClose.click();
     }
 
-    private void commentingOnStory(){
-        commentStory.click();
-        commentStory.sendKeys("Testing Freemium User comment action");
-        commentSend.click();
+    public void commentingOnStory(String postType) {
+
+        switch (postType.toUpperCase()){
+        case "STORY":
+            commentStory.click();
+            commentStory.sendKeys("Testing Freemium User comment action");
+            commentSend.click();
+            break;
+        }
+
+        if (waitForVisibility(firstUserStory)){
+            firstUserStory.click();
+        }
+
+        globalClose.click();
     }
 }

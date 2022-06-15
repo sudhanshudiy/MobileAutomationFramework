@@ -69,7 +69,7 @@ public class ActivityUserStories implements ILogger {
     public void verifyUserStoryActions() {
         log.info("Performing free user story actions .......:---:....");
 
-        if (waitForVisibility(firstUserStory)){
+        if (waitForVisibility(firstUserStory)) {
             firstUserStory.click();
         }
 
@@ -84,7 +84,7 @@ public class ActivityUserStories implements ILogger {
 
     public void volumeActions() {
 
-        if (waitForVisibility(firstUserStory)){
+        if (waitForVisibility(firstUserStory)) {
             firstUserStory.click();
         }
 
@@ -99,7 +99,7 @@ public class ActivityUserStories implements ILogger {
 
     public void likePost() {
 
-        if (waitForVisibility(firstUserStory)){
+        if (waitForVisibility(firstUserStory)) {
             firstUserStory.click();
         }
 
@@ -110,18 +110,23 @@ public class ActivityUserStories implements ILogger {
 
     public void commentingOnStory(String postType) {
 
-        switch (postType.toUpperCase()){
-        case "STORY":
-            commentStory.click();
-            commentStory.sendKeys("Testing Freemium User comment action");
-            commentSend.click();
-            break;
+        switch (postType.toUpperCase()) {
+            case "STORY":
+                commentStory.click();
+                commentStory.sendKeys("Commenting on user story");
+                commentSend.click();
+                break;
+            case "POST":
+                commentStory.click();
+                commentStory.sendKeys("Commenting on Post");
+                commentSend.click();
+                break;
         }
 
-        if (waitForVisibility(firstUserStory)){
+
+        if (waitForVisibility(firstUserStory)) {
             firstUserStory.click();
         }
-
         globalClose.click();
     }
 }

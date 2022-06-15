@@ -61,7 +61,6 @@ public class ActivityPage {
 
     private void waitForVisibility(WebElement webElement) {
         WebDriverWait wait = new WebDriverWait(driver, 8);
-        System.out.println("page source " + driver.getPageSource());
         wait.until(ExpectedConditions.visibilityOf(webElement));
     }
 
@@ -75,10 +74,18 @@ public class ActivityPage {
        cameraButton.click();
     }
 
+    public void verifyPageHeader(){
+        waitForVisibility(pageHeader);
+    }
+
     public void verifyUserStories() {
         waitForVisibility(pageHeader);
 
         // Click on the firstPost in ALl Feeds
         new CommonPageActions().TouchActions(driver, 251, 345, 1);
+    }
+
+    public void moveToPage(){
+        new CommonPageActions().TouchActions(driver, 26, 752, 1);
     }
 }

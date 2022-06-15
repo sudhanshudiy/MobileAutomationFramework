@@ -75,6 +75,10 @@ public class Library {
         clickDiyPlus();
     }
 
+    public void verifyPageHeader(){
+        waitForVisibility(pageHeader);
+    }
+
     public void nonLoggedUser() {
         isVisible();
         presignInButton.click();

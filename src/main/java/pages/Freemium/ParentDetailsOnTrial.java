@@ -33,7 +33,7 @@ public class ParentDetailsOnTrial implements ILogger {
     @FindBy(xpath = "//XCUIElementTypeTextField[@value='Last Name']")
     private WebElement parentLastName;
 
-    @FindBy(xpath = "//XCUIElementTypeStaticText[@name='Parent Email']")
+    @FindBy(xpath = "//*/XCUIElementTypeOther[2]/XCUIElementTypeTextField")
     private WebElement parentEmailId;
 
     @FindBy(xpath = "//XCUIElementTypeStaticText[@name='Get FREE Access For 7 Days']")
@@ -42,13 +42,13 @@ public class ParentDetailsOnTrial implements ILogger {
     @FindBy(xpath = "//XCUIElementTypeStaticText[@name='Unlock Live Challenges, Contests, and more!']")
     private WebElement pageSubHeader;
 
-    @FindBy(xpath = "//XCUIElementTypeStaticText[@name='Why?']")
+    @FindBy(xpath = "//XCUIElementTypeButton[@name='Why?']")
     private WebElement whyBottomSheet;
 
     @FindBy(xpath = "//XCUIElementTypeStaticText[@name='Parent email id is used to manage DIY subscription via parent and to track your child's progress on DIY.']")
     private WebElement whyBottomSheetText;
 
-    @FindBy(xpath = "//XCUIElementTypeButton[@name='Next']")
+    @FindBy(xpath = "//XCUIElementTypeStaticText[@name='Next']")
     private WebElement pageNextButton;
 
     @FindBy(xpath = "//XCUIElementTypeButton[@name='Ok']")
@@ -56,7 +56,6 @@ public class ParentDetailsOnTrial implements ILogger {
 
 
     private void waitForVisibility(WebElement pageHeader) {
-        System.out.println(driver.getPageSource());
         FluentWait wait = new FluentWait(driver)
                 .withTimeout(Duration.ofSeconds(8))
                 .pollingEvery(Duration.ofSeconds(1))
@@ -76,8 +75,9 @@ public class ParentDetailsOnTrial implements ILogger {
     private void verifyWhyText() {
         if (whyBottomSheet.isEnabled()) {
             whyBottomSheet.click();
-            String text = driver.findElementByName("Parent email id is used to manage DIY").getText();
-            Assert.assertEquals(text, whybottomsheettext, "why bottom sheet text failed to match");
+            /*String text = driver.findElementByXPath("//XCUIElementTypeStaticText[@value='Parent email id is used to manage DIY subscription via parent and to track your child's progress on DIY.']").getText();
+            Assert.assertEquals(text, whybottomsheettext, "why bottom sheet text failed to match");*/
+            okButtonOnWhy.click();
         } else {
             log.error(" 'why' button in Parent Page failed to load.....");
         }
@@ -88,8 +88,11 @@ public class ParentDetailsOnTrial implements ILogger {
         verifyPageHeader();
         parentFirstName.sendKeys(parentfirstname);
         parentLastName.sendKeys(parentlastname);
-        parentEmailId.sendKeys(email);
         verifyWhyText();
-        pageNextButton.click();
+        parentEmailId.clear();
+        parentEmailId.sendKeys(email);
+        if (pageNextButton.isEnabled()){
+            pageNextButton.click();
+        }
     }
 }

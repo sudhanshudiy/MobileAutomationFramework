@@ -2,12 +2,9 @@ import base.factories.DriverFactory;
 import constants.DriverTypes;
 import io.appium.java_client.AppiumDriver;
 import io.qameta.allure.Step;
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import pages.Activity.ActivityUserStories;
-
-import java.util.List;
+import pages.Freemium.ParentDetailsOnTrial;
 
 public class DatePicker {
 
@@ -19,7 +16,7 @@ public class DatePicker {
         driver = DriverFactory.initDriver(DriverTypes.IOS);
     }
 
-    @Test(priority = 1, description = "Launch DIY app and SignIn", groups = "regression, sanity", alwaysRun = true)
+    /*@Test(priority = 1, description = "Launch DIY app and SignIn", groups = "regression, sanity", alwaysRun = true)
     public void verifyHomePage() {
         List<WebElement> list = driver.findElementsByXPath("//XCUIElementTypeStaticText");
         String name = list.get(9).getText();
@@ -28,8 +25,11 @@ public class DatePicker {
         driver.findElementByXPath(name1.replace("$name", name).trim()).click();
         System.out.println(driver.getPageSource());
         new ActivityUserStories(driver).verifyUserStoryActions();
-    }
+    }*/
 
     @Test
-    public void check() throws InterruptedException {}
+    public void check() throws InterruptedException {
+        ParentDetailsOnTrial parentDetailsOnTrial = new ParentDetailsOnTrial(driver);
+        parentDetailsOnTrial.enterParentSignUpDetails("Sudhanshu", "Singh", "sudhanshu@google.com");
+    }
 }

@@ -61,45 +61,6 @@ public class ProfilePage {
     @FindBy(xpath = "//XCUIElementTypeButton[@name='Clear text']")
     private WebElement clearText;
 
-
-    //------------Profile Settings Actions-----------------------//
-
-    @FindBy(xpath = "(//XCUIElementTypeButton[@name='Change Avatar']")
-    private WebElement changeAvatar;
-
-    @FindBy(xpath = "(//XCUIElementTypeButton[@name='Edit Bio']")
-    private WebElement editBio;
-
-    @FindBy(xpath = "(//XCUIElementTypeButton[@name='Change Password']")
-    private WebElement changePassword;
-
-    @FindBy(xpath = "(//XCUIElementTypeButton[@name='Community Guidelines']")
-    private WebElement communityGuidelines;
-
-    @FindBy(xpath = "(//XCUIElementTypeButton[@name='Privacy Policy']")
-    private WebElement privacyPolicy;
-
-    @FindBy(xpath = "(//XCUIElementTypeButton[@name='Parent Dashboard']")
-    private WebElement parentDashBoard;
-
-    @FindBy(xpath = "(//XCUIElementTypeButton[@name='Switch User']")
-    private WebElement switchUsers;
-
-    @FindBy(xpath = "(//XCUIElementTypeButton[@name='Rate Us ★★★★★']")
-    private WebElement rateUs;
-
-    @FindBy(xpath = "//XCUIElementTypeButton[@name='Sign Out All Users']")
-    private WebElement signOutAllUsers;
-
-    @FindBy(xpath = "(//XCUIElementTypeButton[@name='Cancel']")
-    private WebElement cancel;
-
-    @FindBy(xpath = "(//XCUIElementTypeStaticText[@name='Follow'])[3]")
-    private WebElement follow;
-
-    @FindBy(xpath = "(//XCUIElementTypeStaticText[@name='Courses'])[1]")
-    private WebElement coursesHeader;
-
     private boolean isEnabled() {
         return userName.isEnabled();
     }
@@ -122,17 +83,13 @@ public class ProfilePage {
      * @param nickname
      */
     public void searchNickNamesAndSignOut(String nickname) {
-        validateAndClickProfilePage();
+        //validateAndClickProfilePage();
         searchNickNamesAndFollowFirstResult(nickname);
         hasTagActions();
         clearTextAndCancel();
 
     }
 
-    private void validateAndClickProfilePage(){
-        waitForVisibility(coursesHeader);
-        pageActions.TouchActions(driver, 329, 752, 8);
-    }
 
     private void hasTagActions(){
         //select hastags
@@ -148,6 +105,7 @@ public class ProfilePage {
 
 
     private void searchNickNamesAndFollowFirstResult(String nickname){
+        searchBar.click();
         searchBar.sendKeys(nickname);
         pageActions.TouchActions(driver, 291, 259, 4);
     }
@@ -156,14 +114,5 @@ public class ProfilePage {
         waitForVisibility(clearText);
         clearText.click();
         pageActions.TouchActions(driver, 329,59, 2);
-    }
-
-    /** SignOut all user from account settings*/
-    public void signOutAllUsers() {
-        waitForVisibility(searchBar);
-        //Coordinates for SignOut button
-        pageActions.TouchActions(driver, 15,118, 2);
-        waitForVisibility(signOutAllUsers);
-        signOutAllUsers.click();
     }
 }

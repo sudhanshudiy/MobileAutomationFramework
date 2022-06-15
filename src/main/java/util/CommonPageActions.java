@@ -17,6 +17,7 @@ import java.util.Map;
 
 import static io.appium.java_client.touch.WaitOptions.waitOptions;
 import static io.appium.java_client.touch.offset.PointOption.point;
+import static java.time.Duration.ofMillis;
 import static java.time.Duration.ofSeconds;
 
 public class CommonPageActions {
@@ -113,5 +114,16 @@ public class CommonPageActions {
         params.put("elementId", ((RemoteWebElement) pickerElement).getId());
         //driver.executeScript("mobile: scroll", params);
         driver.executeScript("mobile: selectPickerWheelValue", params);
+    }
+
+
+    public void swipeByElement (AppiumDriver driver, WebElement element) {
+        int startX = element.getLocation().getX() + (element.getSize().getWidth() / 2);
+        int startY = element.getLocation().getY() + (element.getSize().getHeight() / 2);
+        new TouchAction(driver)
+                .press((PointOption) element)
+                .waitAction(waitOptions(ofMillis(1000)))
+                .moveTo(point(startX,startY))
+                .release().perform();
     }
 }

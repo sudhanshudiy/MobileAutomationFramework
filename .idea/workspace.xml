@@ -5,18 +5,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27ccec05-bb1c-474c-bf7c-fdd5035b5fc0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/dependencies-accessors/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/fileHashes/resourceHashesCache.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/aws.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/allure-report/Gradle suite/Gradle test.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/allure-report/Gradle suite/Gradle test.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-report/Gradle suite/testng-failed.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/allure-report/bullet_point.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/allure-report/collapseall.gif" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/allure-report/emailable-report.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/allure-report/failed.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/allure-report/index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/allure-report/jquery-3.4.1.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-report/junitreports/TEST-IOSTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-report/junitreports/TEST-ValidateLogin.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-report/junitreports/TEST-DatePicker.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/allure-report/navigator-bullet.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/allure-report/old/Gradle suite/Gradle test.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/allure-report/old/Gradle suite/classes.html" beforeDir="false" />
@@ -32,26 +54,90 @@
       <change beforePath="$PROJECT_DIR$/allure-report/old/index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/allure-report/passed.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/allure-report/skipped.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-report/testng-failed.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/allure-report/testng-reports.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/allure-report/testng-reports.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/allure-report/testng-results.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/allure-report/testng.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/1fb81b1a-4d63-49f2-9943-9c3edbbb0381-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/2d282486-ba25-49bf-be70-64de99983548-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/39400e33-4dae-4ea1-827e-653312f5106d-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/53054a4e-6d28-4b90-90bb-800c6db1e73f-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/61231406-f790-44a7-84b6-69395b8c69ce-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/6db35f50-050e-4e0d-84ef-af6eecb2e8f8-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/b4a2c974-ecc8-4209-9840-35f432394af9-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/e6b179af-163b-49e7-944b-49a2b7e543b3-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/ec7d439e-4d16-4561-8bb0-d926c115eaa2-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/some_file" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/FreemiumSanityFlow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/FreemiumSanityFlow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/ActivityPostUpload.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/ActivityPostUpload.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/FreemiumE2E.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/FreemiumE2E.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testng.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/29d7c1dc-2068-4371-a91f-6b6463ed2bac-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/72abe320-c6c9-40a8-88dd-aa71908a8762-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/b94ce58c-2263-49bc-b0c8-b1f13a06849e-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/caf11cff-45b5-4bea-bb26-0902c1281335-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ActivityPostUpload.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/DatePicker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/FreemiumE2E.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/FreemiumSanityFlow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/SignWithProfileActions.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/base/BaseTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/base/Configuration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/base/Interface/IDrivers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/base/Interface/ILogger.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/base/Listeners/MobileListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/base/Listeners/RetryAnalyse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/base/factories/AndroidDriverManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/base/factories/BrowserStackManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/base/factories/DriverFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/base/factories/IOSDriverManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/constants/Common.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/constants/DriverTypes.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/dataProviders/UserData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/features/FreemiumFlow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/pages/Activity/ActivityPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/pages/Activity/ActivityUserStories.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/pages/Challenges/SecretsOfDrawing.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/pages/Courses/Library.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/pages/Freemium/DiyPlus.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/pages/Freemium/FreemiumBlockerScreen.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/pages/Freemium/FreemiumSignUpPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/pages/Freemium/ParentDetailsOnTrial.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/pages/Freemium/PaywallScreen.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/pages/HomePage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/pages/LoginPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/pages/NonLogged/FreeTrailOption.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/pages/NonLogged/FreeTrailPayWall.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/pages/NonLogged/KidsSignIn.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/pages/NonLogged/ParentSignUpPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/pages/PopUpScreen.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/pages/PostPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/pages/Profile/ProfilePage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/pages/Profile/ProfileUserSettings.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/util/CommonDriverActions.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/util/CommonPageActions$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/util/CommonPageActions.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/util/CommonUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/util/ConfigUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/ActivityPostUpload.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/DatePicker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/FreemiumE2E.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/FreemiumSanityFlow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/SignWithProfileActions.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/MobileAutomationFramework-1.0-SNAPSHOT-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/MobileAutomationFramework-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/DatePicker.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/css/base-style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/js/report.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/default-package.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/test/ActivityPostUpload.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/test/FreemiumE2E.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/test/testng.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-DatePicker.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/jar/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/sourcesJar/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/Activity/ActivityPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/Activity/ActivityPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/Activity/ActivityUserStories.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/Activity/ActivityUserStories.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/Courses/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/Courses/Library.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/Freemium/ParentDetailsOnTrial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/Freemium/ParentDetailsOnTrial.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/StartFreeTrial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/StartFreeTrial.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DatePicker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DatePicker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/FreemiumE2E.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/FreemiumE2E.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +221,7 @@
       <recent name="java" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.DatePicker.check">
+  <component name="RunManager" selected="Gradle.FreemiumE2E.verifyFreemiumRestrictionsOnActivityTab">
     <configuration name="DatePicker (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -182,7 +268,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="DatePicker.verifyHomePage" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="FreemiumE2E" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -195,7 +281,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;DatePicker.verifyHomePage&quot;" />
+            <option value="&quot;FreemiumE2E&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -205,7 +291,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="FreemiumE2E.verifyFreemiumRestrictions" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="FreemiumE2E.verifyFreemiumRestrictionsOnActivityTab" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -218,7 +304,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;FreemiumE2E.verifyFreemiumRestrictions&quot;" />
+            <option value="&quot;FreemiumE2E.verifyFreemiumRestrictionsOnActivityTab&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -228,23 +314,36 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="/Users/itrs-2079/IdeaProjects/MobileAutomationFramework/src/test/resources/FreemiumE2E.xml" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="MobileAutomationFramework.test" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/FreemiumE2E.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="FreemiumE2E.verifyHomePage" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;FreemiumE2E.verifyHomePage&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.FreemiumE2E.verifyFreemiumRestrictionsOnActivityTab" />
+        <item itemvalue="Gradle.FreemiumE2E" />
+        <item itemvalue="Gradle.FreemiumE2E.verifyHomePage" />
         <item itemvalue="Gradle.DatePicker.check" />
-        <item itemvalue="Gradle.DatePicker.verifyHomePage" />
         <item itemvalue="Gradle.DatePicker (1)" />
-        <item itemvalue="TestNG./Users/itrs-2079/IdeaProjects/MobileAutomationFramework/src/test/resources/FreemiumE2E.xml" />
-        <item itemvalue="Gradle.FreemiumE2E.verifyFreemiumRestrictions" />
       </list>
     </recent_temporary>
   </component>

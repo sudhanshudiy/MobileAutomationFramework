@@ -1,4 +1,4 @@
-package pages.Courses;
+package pages.Library;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;

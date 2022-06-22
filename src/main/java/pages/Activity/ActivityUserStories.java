@@ -69,39 +69,27 @@ public class ActivityUserStories implements ILogger {
     public void verifyUserStoryActions() {
         log.info("Performing free user story actions .......:---:....");
 
-        if (waitForVisibility(firstUserStory)) {
-            firstUserStory.click();
-        }
+        if (waitForVisibility(firstUserStory)) {firstUserStory.click();}
 
         //Following or follow user
-        if (waitForVisibility(followUser) && followUser.isDisplayed()) {
-            followUser.click();
-        } else {
-            followingUser.click();
-        }
+        if (waitForVisibility(followUser) && followUser.isDisplayed()) {followUser.click();}
+        else {followingUser.click();}
         globalClose.click();
     }
 
     public void volumeActions() {
 
-        if (waitForVisibility(firstUserStory)) {
-            firstUserStory.click();
-        }
+        if (waitForVisibility(firstUserStory)) {firstUserStory.click();}
 
         //Volume on and Off
-        if (waitForVisibility(volumeOn) || volumeOn.isEnabled()) {
-            volumeOn.click();
-        } else {
-            volumeOff.click();
-        }
+        if (waitForVisibility(volumeOn) || volumeOn.isEnabled()) {volumeOn.click();}
+        else {volumeOff.click();}
         globalClose.click();
     }
 
     public void likePost() {
 
-        if (waitForVisibility(firstUserStory)) {
-            firstUserStory.click();
-        }
+        if (waitForVisibility(firstUserStory)) {firstUserStory.click();}
 
         //like on story
         likeStory.click();
@@ -123,10 +111,7 @@ public class ActivityUserStories implements ILogger {
                 break;
         }
 
-
-        if (waitForVisibility(firstUserStory)) {
-            firstUserStory.click();
-        }
+        if (waitForVisibility(firstUserStory)) {firstUserStory.click();}
         globalClose.click();
     }
 }

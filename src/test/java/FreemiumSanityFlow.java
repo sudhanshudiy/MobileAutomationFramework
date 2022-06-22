@@ -6,7 +6,7 @@ import io.appium.java_client.AppiumDriver;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pages.Activity.ActivityPage;
-import pages.Courses.Library;
+import pages.Library.Library;
 import pages.Freemium.FreemiumBlockerScreen;
 import pages.Freemium.FreemiumSignUpPage;
 import util.CommonPageActions;

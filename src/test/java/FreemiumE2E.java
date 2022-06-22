@@ -10,7 +10,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pages.Activity.ActivityPage;
 import pages.Activity.ActivityUserStories;
-import pages.Courses.Library;
+import pages.Library.Library;
 import pages.Freemium.DiyPlus;
 import pages.Freemium.FreemiumBlockerScreen;
 import pages.Freemium.ParentDetailsOnTrial;

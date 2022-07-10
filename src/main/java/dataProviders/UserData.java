@@ -26,4 +26,14 @@ public class UserData {
         String name = "".concat("free").concat(String.valueOf(commonUtils.getCurrentTimeStampInMili()));
         return new Object [][] {{name, "July", "15", "2012", name, "123456", "xyz@gmail.com"}};
     }
+
+    @DataProvider(name = "searchInvalidChallenge")
+    public Object[][] searchInvalidChallenge() {
+        return new Object [][] {{"ababab"}};
+    }
+
+    @DataProvider(name = "searchValidChallenge")
+    public Object[][] searchValidChallenge() {
+        return new Object [][] {{"crafting"}};
+    }
 }

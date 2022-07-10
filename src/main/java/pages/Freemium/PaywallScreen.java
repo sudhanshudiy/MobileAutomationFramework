@@ -1,25 +1,11 @@
 package pages.Freemium;
 
 import base.Interface.ILogger;
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
-import util.CommonPageActions;
+import pages.BasePage;
 
-import java.time.Duration;
-
-public class PaywallScreen implements ILogger {
-
-    private AppiumDriver driver;
-    private CommonPageActions pageActions;
-
-    public PaywallScreen(AppiumDriver driver) {
-        this.driver = driver;
-        PageFactory.initElements(new AppiumFieldDecorator(driver, Duration.ofSeconds(8)), this);
-        pageActions = new CommonPageActions();
-    }
+public class PaywallScreen extends BasePage implements ILogger {
 
     @FindBy(xpath = "//XCUIElementTypeWindow[@name='intercom window']")
     private WebElement intercomWindow;
@@ -33,10 +19,14 @@ public class PaywallScreen implements ILogger {
     @FindBy(xpath = "//XCUIElementTypeStaticText[@name='Subscribe to DIY']")
     private WebElement pageHeader;
 
+    @Override
+    protected boolean waitForVisibility(WebElement webElement) {
+        return super.waitForVisibility(webElement);
+    }
 
     public void verifyScreenAndClose() {
 
-        if (pageHeader.isEnabled() && pageHeader.isDisplayed()) {
+        if (waitForVisibility(pageHeader) && pageHeader.isEnabled() && pageHeader.isDisplayed()) {
 
             log.info("Pay wall screen displayed");
             //Closing screen

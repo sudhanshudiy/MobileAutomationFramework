@@ -55,6 +55,12 @@ public class ActivityUserStories implements ILogger {
     @FindBy(xpath = "//XCUIElementTypeButton[@name='comments send']")
     private WebElement commentSend;
 
+    @FindBy(xpath = "//XCUIElementTypeImage[@name='global-down']")
+    private WebElement closeComment;
+
+    @FindBy(xpath = "//XCUIElementTypeStaticText[@name='Add a comment...']")
+    private WebElement addComment;
+
     private boolean waitForVisibility(WebElement webElement) {
         try {
             WebDriverWait wait = new WebDriverWait(driver, TimeUnit.MILLISECONDS.toMillis(100));
@@ -89,18 +95,21 @@ public class ActivityUserStories implements ILogger {
 
     public void likePost() {
 
-        if (waitForVisibility(firstUserStory)) {firstUserStory.click();}
+       // if (waitForVisibility(firstUserStory)) {firstUserStory.click();}
 
         //like on story
         likeStory.click();
-        globalClose.click();
+        //globalClose.click();
     }
 
     public void commentingOnStory(String postType) {
 
         switch (postType.toUpperCase()) {
             case "STORY":
-                commentStory.click();
+                if (addComment.isEnabled()){
+                    driver.findElementByXPath("//*/XCUIElementTypeOther[1]/XCUIElementTypeTextView").click();
+                    System.out.println(driver.getPageSource());
+                }
                 commentStory.sendKeys("Commenting on user story");
                 commentSend.click();
                 break;

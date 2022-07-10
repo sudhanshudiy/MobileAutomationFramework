@@ -7,7 +7,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 import util.CommonPageActions;
 
 import java.time.Duration;
@@ -63,7 +62,6 @@ public class ActivityPage {
     private void waitForVisibility(WebElement webElement) {
         WebDriverWait wait = new WebDriverWait(driver, 8);
         wait.until(ExpectedConditions.visibilityOf(webElement));
-        Assert.assertEquals("Activity", "");
     }
 
     private void click(WebElement webElement) {

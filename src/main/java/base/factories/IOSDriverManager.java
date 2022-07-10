@@ -12,6 +12,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import util.ConfigUtil;
 
 import java.io.File;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Properties;
 
@@ -74,4 +75,15 @@ class IOSDriverManager implements ILogger, IDrivers {
                 throw new RuntimeException("Use getInstance() method to get the single instance of this class");
             }
         }
+
+    /**
+     * Retrieve Performance data for an APP
+     * @param sessionId
+     * @throws MalformedURLException
+     */
+    public void getPerformanceData(String sessionId) throws MalformedURLException {
+        desiredCapabilities.setCapability("packageName", Common.APP_PACKAGE);
+        desiredCapabilities.setCapability("dataType", "json");
+        iosDriver = new IOSDriver<>(new URL("/session/:" + sessionId + "/appium/getPerformanceData"), desiredCapabilities);
+    }
 }

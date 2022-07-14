@@ -102,7 +102,7 @@ public class CommonPageActions {
 
 
     public static void paywallScreen(AppiumDriver driver) {
-        PaywallScreen paywallScreen = new PaywallScreen(driver);
+        PaywallScreen paywallScreen = new PaywallScreen();
         paywallScreen.verifyScreenAndClose();
     }
 

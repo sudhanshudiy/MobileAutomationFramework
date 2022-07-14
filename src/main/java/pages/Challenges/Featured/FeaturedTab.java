@@ -36,7 +36,6 @@ public class FeaturedTab extends BasePage {
         return super.waitForVisibility(webElement);
     }
 
-
     /**
      * Select Challenge Type i.e Live , SpotLight, Contest etc.
      */

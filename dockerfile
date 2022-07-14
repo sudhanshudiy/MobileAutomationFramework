@@ -65,7 +65,7 @@ ENV JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/jre" \
 #=====================
 # Install Android SDK
 #=====================
-ARG ANDROID_PLATFORM_VERSION="android-30"
+ARG ANDROID_PLATFORM_VERSION="android-31"
 ENV ANDROID_HOME=/root
 
 RUN wget -O tools.zip https://dl.google.com/android/repository/${SDK_VERSION}.zip && \

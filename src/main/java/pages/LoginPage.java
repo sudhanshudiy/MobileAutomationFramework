@@ -1,26 +1,21 @@
 package pages;
 
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.android.AndroidElement;
-import io.appium.java_client.pagefactory.AndroidFindBy;
-import io.appium.java_client.pagefactory.AppiumFieldDecorator;
-import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
-public class LoginPage {
+public class LoginPage extends BasePage {
 
-    private AppiumDriver driver;
-
-    public LoginPage(AppiumDriver driver) {
-        this.driver = driver;
-        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+    public LoginPage(AppiumDriver driver){
+        super(driver);
     }
 
-    @AndroidFindBy(id = "username")
-    private AndroidElement nameElement;
-    @AndroidFindBy(id = "password")
-    private AndroidElement passwordElement;
-    @AndroidFindBy(id = "login")
-    private AndroidElement loginElement;
+    @FindBy(id = "username")
+    private WebElement nameElement;
+    @FindBy(id = "password")
+    private WebElement passwordElement;
+    @FindBy(id = "login")
+    private WebElement loginElement;
 
     public boolean isDisplayed() {return loginElement.isDisplayed();}
 

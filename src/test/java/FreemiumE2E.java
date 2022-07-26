@@ -35,7 +35,7 @@ public class FreemiumE2E extends BaseTest {
         library = new Library(driver);
         activityPage = new ActivityPage(driver);
         activityUserStories = new ActivityUserStories(driver);
-        paywallScreen = new PaywallScreen();
+        paywallScreen = new PaywallScreen(driver);
     }
 
     @Test(priority = 1, description = "Launch DIY app and SignIn", groups = "regression, sanity", alwaysRun = true)

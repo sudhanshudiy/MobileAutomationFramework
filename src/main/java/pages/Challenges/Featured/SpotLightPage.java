@@ -1,10 +1,15 @@
 package pages.Challenges.Featured;
 
+import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import pages.BasePage;
 
 public class SpotLightPage extends BasePage {
+
+    public SpotLightPage(AppiumDriver driver){
+        super(driver);
+    }
 
     @FindBy(xpath = "//XCUIElementTypeImage[@name='banner-detail-spotlight']")
     WebElement spotlightBanner;

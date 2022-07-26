@@ -4,19 +4,22 @@ import base.BaseTest;
 import base.Interface.ILogger;
 import io.appium.java_client.AppiumDriver;
 import io.qameta.allure.Attachment;
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.testng.*;
 import org.testng.annotations.ITestAnnotation;
 import org.testng.xml.XmlSuite;
 
+import java.io.File;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class MobileListener implements ITestNGListener, ITestListener, IAnnotationTransformer, ISuiteListener, IReporter, ILogger {
+public class MobileListener extends TestListenerAdapter implements ITestNGListener, ITestListener, IAnnotationTransformer,
+        ISuiteListener, IReporter, ILogger {
 
     @Override
     public void onStart(ITestContext context) {
@@ -26,11 +29,11 @@ public class MobileListener implements ITestNGListener, ITestListener, IAnnotati
 
     @Override
     public void onTestFailure(ITestResult result) {
-        log.error("Test Failed on Method :: " + result.getTestContext().getFailedTests().getAllMethods());
+        log.error("Test Failed on Method :: " + result.getName());
         AppiumDriver driver = BaseTest.getDriver();
         try {
             if (driver != null) {
-                saveFailureScreenShot(driver);
+               FileUtils.copyFile(saveFailureScreenShotFile(driver), new File("src/test/FailureScreenshots/" + "My.jpg"));
             }
         } catch (Exception e) {
            saveText("failed to take screenshot ::->::" + getTestMethodName(result));
@@ -84,6 +87,11 @@ public class MobileListener implements ITestNGListener, ITestListener, IAnnotati
     @Attachment
     public byte[] saveFailureScreenShot(AppiumDriver driver) {
         return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+    }
+
+    @Attachment
+    public File saveFailureScreenShotFile(AppiumDriver driver) {
+        return ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
     }
 
     @Attachment(value = "{0}", type = "text/plain")

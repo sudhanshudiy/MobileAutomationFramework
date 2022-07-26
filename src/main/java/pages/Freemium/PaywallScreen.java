@@ -1,11 +1,16 @@
 package pages.Freemium;
 
 import base.Interface.ILogger;
+import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import pages.BasePage;
 
 public class PaywallScreen extends BasePage implements ILogger {
+
+    public PaywallScreen(AppiumDriver driver) {
+        super(driver);
+    }
 
     @FindBy(xpath = "//XCUIElementTypeWindow[@name='intercom window']")
     private WebElement intercomWindow;

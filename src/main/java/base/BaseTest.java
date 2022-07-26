@@ -41,7 +41,7 @@ public class BaseTest implements ILogger {
      * Creating shareable driver across multiple classes
      * @return
      */
-    public AppiumDriver initializeDriver() {
+    protected AppiumDriver initializeDriver() {
         driverThreadLocal.set(DriverFactory.initDriver(DriverTypes.IOS));
         return getDriver();
     }

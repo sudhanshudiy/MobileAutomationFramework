@@ -1,10 +1,15 @@
 package pages.Challenges.Featured;
 
+import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import pages.BasePage;
 
 public class LiveChallengePage extends BasePage {
+
+    public LiveChallengePage(AppiumDriver driver){
+        super(driver);
+    }
 
     @FindBy(xpath = "//XCUIElementTypeButton[@name='Join Now']")
     WebElement joinNow;

@@ -7,16 +7,20 @@ import pages.BasePage;
 
 public class FeaturedTab extends BasePage {
 
+    public FeaturedTab(AppiumDriver driver){
+        super(driver);
+    }
+
     private AppiumDriver driver;
 
 
     @FindBy(xpath = "//XCUIElementTypeImage[@name='banner-live'])[1]")
     WebElement pageHeader;
 
-    @FindBy(xpath = "//XCUIElementTypeImage[@name='banner-live'])[1]")
+    @FindBy(xpath = "//XCUIElementTypeStaticText[@name='Live Workshops']")
     WebElement liveChallenge;
 
-    @FindBy(xpath = "//XCUIElementTypeImage[@name='banner-contest'])[1]")
+    @FindBy(xpath = "//XCUIElementTypeStaticText[@name='Contests']")
     WebElement contest;
 
     @FindBy(xpath = "//XCUIElementTypeImage[@name='banner-spotlight'])[1]")
